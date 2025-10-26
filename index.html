@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <style>
         body {
             font-family: 'Assistant', sans-serif;
@@ -15,6 +16,34 @@
         }
         .hero-bg {
             background-color: #f8f9fa;
+        }
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            left: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+        }
+        p {
+           @apply text-lg text-gray-600 leading-relaxed;
+        }
+        h1, h2, h3 {
+           @apply text-gray-800;
         }
     </style>
 </head>
@@ -28,84 +57,87 @@
                 <br>
                 למנוע הצמיחה של המחר
             </h1>
-            <p class="mt-4 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">אני הופך את הבלגן, הניירת ותהליכי העבודה השבורים בעסק שלך למערכת מסודרת, יעילה ואוטומטית, כדי שתוכל להתפנות למה שחשוב באמת - להצמיח את העסק.</p>
-            <a href="#contact" class="mt-8 inline-block bg-amber-500 text-white font-bold text-lg px-8 py-3 rounded-lg shadow-lg hover:bg-amber-600 transition-colors">כן, אני רוצה לשמוע עוד</a>
+            <p class="mt-4 md:text-xl max-w-3xl mx-auto">אני הופך את הבלגן, הניירת ותהליכי העבודה השבורים בעסק שלך למערכת מסודרת, יעילה ואוטומטית, כדי שתוכל להתפנות למה שחשוב באמת - להצמיח את העסק.</p>
+            <!-- ACTION REQUIRED: Replace 972XXXXXXXXX with your WhatsApp number (e.g., 972501234567) -->
+            <a href="https://wa.me/972547575299?text=היי עמרי, ראיתי את דף הנחיתה ואשמח לשמוע עוד" target="_blank" class="mt-8 inline-block bg-green-500 text-white font-bold text-lg px-8 py-3 rounded-lg shadow-lg hover:bg-green-600 transition-colors transform hover:scale-105">
+                <i class="fab fa-whatsapp mr-2"></i> בואו נדבר בוואטסאפ
+            </a>
         </div>
     </header>
 
     <main class="container mx-auto px-6 py-12">
 
         <!-- Pain Points Section -->
-        <section class="text-center">
-            <h2 class="text-3xl font-bold text-gray-800">נשמע מוכר?</h2>
+        <section class="text-center mt-16">
+            <h2 class="text-3xl font-bold">נשמע מוכר?</h2>
             <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
                 <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-amber-500">
                     <h3 class="text-xl font-semibold">טובעים בניירת וקבלות?</h3>
-                    <p class="mt-2 text-gray-600">הזמן שלך יקר מדי מכדי לבזבז אותו על חיפוש מסמכים, מעקב אחרי חשבוניות וניהול ידני של תשלומים.</p>
+                    <p class="mt-2">הזמן שלך יקר מדי מכדי לבזבז אותו על חיפוש מסמכים, מעקב אחרי חשבוניות וניהול ידני של תשלומים.</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-amber-500">
                     <h3 class="text-xl font-semibold">פרויקטים מתנהלים באקסל ומחברות?</h3>
-                    <p class="mt-2 text-gray-600">מידע חשוב הולך לאיבוד, ותהליכים מורכבים תלויים בזיכרון של עובד אחד במקום במערכת מסודרת.</p>
+                    <p class="mt-2">מידע חשוב הולך לאיבוד, ותהליכים מורכבים תלויים בזיכרון של עובד אחד במקום במערכת מסודרת.</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-amber-500">
-                    <h3 class="text-xl font-semibold">מבזבזים זמן על עבודה שחורה?</h3>
-                    <p class="mt-2 text-gray-600">אתה והעובדים שלך עושים שוב ושוב את אותן פעולות ידניות שאפשר היה לבצע בלחיצת כפתור אחת.</p>
+                    <h3 class="text-xl font-semibold">מבזבזים זמן על עבודה ידנית חזרתית?</h3>
+                    <p class="mt-2">אתה והעובדים שלך עושים שוב ושוב את אותן פעולות שאפשר היה לבצע בלחיצת כפתור אחת.</p>
                 </div>
             </div>
-            <p class="mt-8 text-gray-600">אם ענית "כן" על אחת מהשאלות האלה, הגעת למקום הנכון.</p>
+            <p class="mt-8 text-lg">אם ענית "כן" על אחת מהשאלות האלה, הגעת למקום הנכון.</p>
         </section>
 
         <!-- Solution Section -->
-        <section class="mt-20">
+        <section class="mt-24">
             <div class="text-center">
-                <h2 class="text-3xl font-bold text-gray-800">הפתרון: בניית מערכת תפעולית חכמה</h2>
-                <p class="mt-2 text-gray-600 max-w-2xl mx-auto">במקום פלסטרים, אנחנו בונים יחד תשתית יציבה שתשרת את העסק שלך לשנים קדימה. התהליך מורכב משלושה שלבים:</p>
+                <h2 class="text-3xl font-bold">הפתרון: בניית מערכת תפעולית חכמה</h2>
+                <p class="mt-4 max-w-2xl mx-auto">במקום פלסטרים, אנחנו בונים יחד תשתית יציבה שתשרת את העסק שלך לשנים קדימה. התהליך מורכב משלושה שלבים:</p>
             </div>
             <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-10">
                 <div class="text-center">
                     <div class="mx-auto h-16 w-16 flex items-center justify-center bg-amber-100 text-amber-600 rounded-full text-2xl font-bold">1</div>
                     <h3 class="mt-4 text-xl font-bold">אבחון ומיפוי</h3>
-                    <p class="mt-2 text-gray-600">נשב יחד, נבין לעומק את תהליכי העבודה הקיימים ונזהה בדיוק איפה הכסף והזמן שלך מתבזבזים.</p>
+                    <p class="mt-2">נשב יחד, נבין לעומק את תהליכי העבודה הקיימים ונזהה בדיוק איפה הכסף והזמן שלך מתבזבזים.</p>
                 </div>
                 <div class="text-center">
                     <div class="mx-auto h-16 w-16 flex items-center justify-center bg-amber-100 text-amber-600 rounded-full text-2xl font-bold">2</div>
                     <h3 class="mt-4 text-xl font-bold">סדר וארגון דיגיטלי</h3>
-                    <p class="mt-2 text-gray-600">נבחר ונתאים כלים דיגיטליים פשוטים וזולים שיאחדו את כל המידע במקום אחד נגיש, מסודר ומאובטח.</p>
+                    <p class="mt-2">נבחר ונתאים כלים דיגיטליים פשוטים וזולים שיאחדו את כל המידע במקום אחד נגיש, מסודר ומאובטח.</p>
                 </div>
                 <div class="text-center">
                     <div class="mx-auto h-16 w-16 flex items-center justify-center bg-amber-100 text-amber-600 rounded-full text-2xl font-bold">3</div>
                     <h3 class="mt-4 text-xl font-bold">אוטומציה חכמה</h3>
-                    <p class="mt-2 text-gray-600">נבנה תהליכים אוטומטיים שיטפלו במשימות החוזרות (כמו שליחת תזכורות, הפקת דוחות, או עדכון לקוחות) ויחסכו לכם שעות יקרות בכל שבוע.</p>
+                    <p class="mt-2">נבנה תהליכים אוטומטיים שיטפלו במשימות החוזרות ויחסכו לכם שעות יקרות בכל שבוע.</p>
                 </div>
             </div>
         </section>
 
         <!-- About Me Section -->
-        <section class="mt-20 bg-white p-8 md:p-12 rounded-lg shadow-lg">
+        <section class="mt-24 bg-white p-8 md:p-12 rounded-lg shadow-lg">
             <div class="flex flex-col md:flex-row items-center gap-8">
                 <div class="md:w-1/3 text-center">
                     <!-- 
-                        ###########################################################
-                        ### ACTION REQUIRED: PASTE YOUR IMAGE LINK IN THE SRC ATTRIBUTE BELOW ###
-                        ###########################################################
+                        ###################################################################
+                        ### ===> ACTION REQUIRED: PASTE YOUR IMAGE LINK IN THE SRC BELOW ###
+                        ###################################################################
                     -->
-                    <img src=https://i.ibb.co/Y4MSJHkt/Gemini-Generated-Image-ajek5pajek5pajek.png alt="עמרי קורן" class="h-48 w-48 object-cover rounded-full mx-auto shadow-md">
+                    <img src= https://i.ibb.co/21Qwwtj4/Gemini-Generated-Image-ajek5pajek5pajek.png="עמרי קורן" class="h-48 w-48 object-cover rounded-full mx-auto shadow-md">
                     <h3 class="mt-4 text-2xl font-bold">עמרי קורן</h3>
                     <p class="text-gray-600">מומחה לייעול תהליכים</p>
                 </div>
                 <div class="md:w-2/3">
                     <h2 class="text-3xl font-bold text-gray-800">הגיע הזמן לעבוד חכם, לא קשה</h2>
-                    <p class="mt-4 text-lg text-gray-600">נעים מאוד, אני עמרי. עם מעל 8 שנות ניסיון בהקמת מערכות תפעוליות בחברות צומחות ותואר שני בהנדסת מערכת, התשוקה שלי היא לקחת בלגן ולהפוך אותו לסדר. אני מביא איתי גישה מעשית (Hands-On), שמתחילה בהבנת הצרכים הייחודיים של העסק *שלך*, ומסתיימת בבניית פתרון מותאם אישית, פשוט להבנה וקל לתפעול.</p>
-                    <p class="mt-4 text-lg text-gray-600">אני מאמין שגם עסק קטן יכול וצריך להתנהל כמו מכונה משומנת. המטרה שלי היא לתת לך את הכלים והשקט הנפשי כדי שתוכל להפסיק "לכבות שריפות" ולהתחיל לנהל את העסק שתמיד חלמת עליו.</p>
+                    <p class="mt-4 text-lg text-gray-600 leading-relaxed">נעים מאוד, אני עמרי. עם מעל 8 שנות ניסיון בהקמת מערכות תפעוליות בחברות צומחות ותואר שני בהנדסת מערכת, התשוקה שלי היא לקחת בלגן ולהפוך אותו לסדר. אני מביא איתי גישה מעשית (Hands-On), שמתחילה בהבנת הצרכים הייחודיים של העסק *שלך*, ומסתיימת בבניית פתרון מותאם אישית, פשוט להבנה וקל לתפעול.</p>
+                    <p class="mt-4 text-lg text-gray-600 leading-relaxed">אני מאמין שגם עסק קטן יכול וצריך להתנהל כמו מכונה משומנת. המטרה שלי היא לתת לך את הכלים והשקט הנפשי כדי שתוכל להפסיק "לכבות שריפות" ולהתחיל לנהל את העסק שתמיד חלמת עליו.</p>
                 </div>
             </div>
         </section>
 
         <!-- Differentiation Section -->
-        <section class="mt-20">
+        <section class="mt-24">
             <div class="text-center">
-                <h2 class="text-3xl font-bold text-gray-800">הבידול שלי: ניסיון אמיתי, לא רק תיאוריה</h2>
-                <p class="mt-2 text-gray-600 max-w-3xl mx-auto">בשוק של היום קל למצוא מומחי אוטומציה שלמדו בקורס. מה שמייחד את הגישה שלי הוא השילוב בין הבנה טכנולוגית לבין ניסיון של שנים מתוך ארגונים כמו שלך.</p>
+                <h2 class="text-3xl font-bold">הבידול שלי: ניסיון אמיתי, לא רק תיאוריה</h2>
+                 <p class="mt-4 max-w-3xl mx-auto">בשוק של היום קל למצוא מומחי אוטומציה שלמדו בקורס. מה שמייחד את הגישה שלי הוא השילוב בין הבנה טכנולוגית לבין ניסיון של שנים מתוך ארגונים כמו שלך.</p>
             </div>
             <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-white p-6 rounded-lg shadow-md">
@@ -113,40 +145,38 @@
                         <svg class="h-10 w-10 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                         <h3 class="text-xl font-bold">ראייה מערכתית מבפנים</h3>
                     </div>
-                    <p class="mt-4 text-gray-600">לאחר שעבדתי בחברות קטנות וגדולות, אני יודע לזהות את צווארי הבקבוק האמיתיים - גם את אלה שאתם כבר לא רואים בעצמכם.</p>
+                    <p class="mt-4 leading-relaxed">לאחר שעבדתי בחברות קטנות וגדולות, אני יודע לזהות את צווארי הבקבוק האמיתיים - גם את אלה שאתם כבר לא רואים בעצמכם.</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center gap-4">
                        <svg class="h-10 w-10 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                         <h3 class="text-xl font-bold">פתרון מותאם אישית (לא "העתק-הדבק")</h3>
                     </div>
-                    <p class="mt-4 text-gray-600">כל עסק הוא עולם ומלואו. אני לא מגיע עם פתרון מוכן, אלא בונה יחד אתכם מערכת שתתאים בדיוק לצרכים, לתקציב ולקצב הגדילה שלכם.</p>
+                    <p class="mt-4 leading-relaxed">כל עסק הוא עולם ומלואו. אני לא מגיע עם פתרון מוכן, אלא בונה יחד אתכם מערכת שתתאים בדיוק לצרכים, לתקציב ולקצב הגדילה שלכם.</p>
                 </div>
                  <div class="bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center gap-4">
                         <svg class="h-10 w-10 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                         <h3 class="text-xl font-bold">תוצאות מהירות וערך לטווח ארוך</h3>
                     </div>
-                    <p class="mt-4 text-gray-600">המטרה היא לא רק לחסוך לכם זמן וכסף מהיום הראשון, אלא לבנות תשתית יציבה שתאפשר לכם לצמוח בלי שהבלגן יחזור.</p>
+                    <p class="mt-4 leading-relaxed">המטרה היא לא רק לחסוך לכם זמן וכסף מהיום הראשון, אלא לבנות תשתית יציבה שתאפשר לכם לצמוח בלי שהבלגן יחזור.</p>
                 </div>
             </div>
+             <div class="mt-10 text-center">
+                 <!-- ACTION REQUIRED: Replace 972XXXXXXXXX with your WhatsApp number (e.g., 972501234567) -->
+                 <a href="https://wa.me/972547575299?text=היי עמרי, קראתי על הבידול שלך ואשמח לדבר" target="_blank" class="inline-block bg-green-500 text-white font-bold text-lg px-8 py-3 rounded-lg shadow-lg hover:bg-green-600 transition-colors transform hover:scale-105">
+                     <i class="fab fa-whatsapp mr-2"></i> רוצים לשמוע עוד? דברו איתי בוואטסאפ
+                 </a>
+             </div>
         </section>
-
-        <!-- Pilot Program Section -->
-        <section class="mt-20 text-center bg-amber-50 border-y-2 border-amber-200 py-10">
-             <h2 class="text-3xl font-bold text-gray-800">הזדמנות ללקוחות ראשונים</h2>
-             <p class="mt-2 text-lg text-gray-700 max-w-2xl mx-auto">כחלק מהשקת השירות, אני מציע למספר מצומצם של לקוחות ראשונים חבילת התנעה מקיפה במחיר מיוחד. זו הזדמנות עבורכם לקבל שירות פרימיום ולעצב יחד איתי את סיפור ההצלחה שלכם, שיוצג כאן בעתיד.</p>
-             <a href="#contact" class="mt-6 inline-block text-amber-600 font-bold hover:underline">דברו איתי לפרטים נוספים &larr;</a>
-        </section>
-
 
         <!-- Contact Section -->
-        <section id="contact" class="mt-20 text-center">
-            <h2 class="text-3xl font-bold text-gray-800">מוכנים לעשות את הצעד הראשון?</h2>
-            <p class="mt-2 text-lg text-gray-600 max-w-xl mx-auto">השאירו פרטים ואחזור אליכם לשיחת אבחון קצרה, ללא עלות וללא התחייבות, כדי שנבין יחד איך אפשר לעזור לעסק שלכם לצמוח.</p>
+        <section id="contact" class="mt-24 text-center">
+            <h2 class="text-3xl font-bold">מוכנים לעשות את הצעד הראשון, אבל מעדיפים שאני אחזור אליכם?</h2>
+             <p class="mt-4 max-w-xl mx-auto">השאירו פרטים ואחזור אליכם לשיחת אבחון קצרה, ללא עלות וללא התחייבות, או פשוט שלחו לי הודעה בוואטסאפ.</p>
             <!-- 
                 ###########################################################
-                ### ACTION REQUIRED: PASTE YOUR FORMSPREE URL IN THE ACTION ATTRIBUTE BELOW ###
+                ### ===> ACTION REQUIRED: PASTE YOUR FORMSPREE URL IN THE ACTION ATTRIBUTE BELOW ###
                 ###########################################################
             -->
             <form action=https://formspree.io/f/xwprdpbn method="POST" class="mt-8 max-w-lg mx-auto">
@@ -156,7 +186,7 @@
                 </div>
                 <input type="tel" name="phone" placeholder="מספר טלפון" class="mt-4 w-full p-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500" required>
                 <textarea name="message" placeholder="במה הייתם רוצים שאעזור?" class="mt-4 w-full p-3 bg-white border border-gray-300 rounded-lg h-24 focus:ring-2 focus:ring-amber-500"></textarea>
-                <button type="submit" class="mt-6 w-full bg-amber-500 text-white font-bold text-lg px-8 py-3 rounded-lg shadow-lg hover:bg-amber-600 transition-colors">שליחה</button>
+                <button type="submit" class="mt-6 w-full bg-amber-500 text-white font-bold text-lg px-8 py-3 rounded-lg shadow-lg hover:bg-amber-600 transition-colors transform hover:scale-105">שליחה</button>
             </form>
         </section>
 
@@ -167,6 +197,12 @@
             <p>&copy; 2025 עמרי קורן | ייעול תהליכים עסקיים. כל הזכויות שמורות.</p>
         </div>
     </footer>
+
+    <!-- Floating WhatsApp Button -->
+     <!-- ACTION REQUIRED: Replace 972XXXXXXXXX with your WhatsApp number (e.g., 972501234567) -->
+    <a href="https://wa.me/972XXXXXXXXX?text=היי עמרי, ראיתי את דף הנחיתה ואשמח לשמוע עוד" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
 </body>
 </html>
