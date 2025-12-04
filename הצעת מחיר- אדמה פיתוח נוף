@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>הצעת מחיר - אדמה פיתוח נוף</title>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1a3c5e; /* Deep Blue - Professional */
+            --accent-color: #e67e22; /* Orange - Action */
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Heebo', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #555; /* רקע כהה לתצוגה מקדימה */
+            color: var(--text-color);
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 20px auto;
+            background: white;
+            padding: 20mm;
+            box-sizing: border-box;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        /* Header Layout */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .brand-name {
+            font-size: 32px;
+            font-weight: 900;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            line-height: 1;
+        }
+
+        .brand-sub {
+            font-size: 14px;
+            color: var(--accent-color);
+            font-weight: 500;
+            letter-spacing: 0;
+            margin-top: 5px;
+        }
+
+        .company-details {
+            text-align: left;
+            font-size: 0.9em;
+            color: #666;
+            line-height: 1.4;
+            direction: ltr; /* מספרים ומייל מוצגים משמאל לימין */
+        }
+
+        .company-details strong {
+            color: var(--primary-color);
+            display: block;
+            font-size: 1.1em;
+            margin-bottom: 2px;
+            direction: rtl;
+            text-align: left;
+        }
+
+        /* Document Title */
+        .doc-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 26px;
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+        }
+
+        .client-info {
+            background-color: var(--light-bg);
+            padding: 15px;
+            border-radius: 6px;
+            border-right: 4px solid var(--accent-color);
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .info-group strong {
+            display: block;
+            font-size: 0.85em;
+            color: #777;
+            margin-bottom: 2px;
+        }
+
+        .info-group span {
+            font-weight: 700;
+            font-size: 1.1em;
+        }
+
+        /* Content Sections */
+        h3 {
+            color: var(--primary-color);
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 8px;
+            margin-top: 25px;
+            font-size: 18px;
+        }
+
+        p, li {
+            font-size: 15px;
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+
+        ul {
+            padding-right: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .highlight {
+            background-color: #fff3cd;
+            padding: 2px 4px;
+            border-radius: 2px;
+            font-weight: bold;
+        }
+
+        /* Pricing Table */
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .pricing-table th {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px;
+            text-align: right;
+            font-weight: 500;
+        }
+
+        .pricing-table td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .price-cell {
+            text-align: left;
+            font-weight: bold;
+            font-size: 1.2em;
+            color: var(--primary-color);
+            white-space: nowrap;
+            direction: ltr; /* כדי שהש"ח יופיע בצד הנכון */
+        }
+
+        .notes {
+            font-size: 0.85em;
+            color: #666;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        /* Signature Section */
+        .signature-area {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 30px;
+            border-top: 1px dashed #ccc;
+        }
+
+        .sign-box {
+            width: 40%;
+            text-align: center;
+        }
+
+        .sign-line {
+            border-bottom: 1px solid #333;
+            margin-bottom: 10px;
+            height: 40px;
+        }
+
+        /* Print Button */
+        @media print {
+            body { background: white; }
+            .page { margin: 0; box-shadow: none; width: 100%; height: auto; padding: 0; }
+            .no-print { display: none; }
+        }
+
+        .btn-print {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: var(--accent-color);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Heebo', sans-serif;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .btn-print:hover { background: #d35400; }
+    </style>
+</head>
+<body>
+
+    <button class="btn-print no-print" onclick="window.print()">הדפס / שמור כ-PDF</button>
+
+    <div class="page">
+        <!-- Header -->
+        <header>
+            <div class="logo-container">
+                <div class="brand-name">Methodic Ops</div>
+                <div class="brand-sub">Turning Chaos into Clarity</div>
+            </div>
+            <div class="company-details">
+                <strong>עמרי קורן</strong>
+                054-757-5299<br>
+                omrihalfon777@gmail.com
+            </div>
+        </header>
+
+        <!-- Document Info -->
+        <div class="doc-title">
+            <h1>הצעת מחיר: חבילת "שליטה ובקרה" (פיילוט)</h1>
+        </div>
+
+        <div class="client-info">
+            <div class="info-group">
+                <strong>לכבוד</strong>
+                <span>אסף קדישאי, אדמה נופים</span>
+            </div>
+            <div class="info-group">
+                <strong>תאריך</strong>
+                <span>4 בדצמבר, 2025</span>
+            </div>
+        </div>
+
+        <!-- Section 1 -->
+        <h3>1. המטרה</h3>
+        <p>בהמשך לשיחתנו ולאפיון הצרכים המיידיים של העסק, מטרת הפרויקט היא הקמת מערכת ניהול ממוקדת, פשוטה לתפעול, שתעניק לבעל העסק "שקט תעשייתי" ותמונת מצב מדויקת בזמן אמת על זרימת הכספים (גבייה והוצאות) והמשימות השוטפות, ללא מורכבות טכנולוגית מיותרת.</p>
+
+        <!-- Section 2 -->
+        <h3>2. מפרט הפרויקט: מה מקבלים?</h3>
+        <p>המערכת תיבנה בהתאמה אישית לצרכי "אדמה נופים" ותכלול 3 לוחות שליטה מרכזיים:</p>
+
+        <ul style="list-style-type: none; padding-right: 0;">
+            <li style="margin-bottom: 15px;">
+                <strong>א. מנוע הגבייה והתוספות ("איפה הכסף שלי?")</strong>
+                <ul>
+                    <li>תצוגת סטטוס גבייה ברורה לכל פרויקט: סכום החוזה, כמה שולם בפועל, ומה היתרה לגבייה.</li>
+                    <li><span class="highlight">דגש קריטי:</span> מנגנון ייעודי לתיעוד וניהול <strong>תוספות ושינויים</strong> (Extras) בזמן אמת – כדי להבטיח שאף תוספת לא נשכחת בחשבון הסופי מול הלקוח.</li>
+                </ul>
+            </li>
+            
+            <li style="margin-bottom: 15px;">
+                <strong>ב. יומן רווחיות פרויקט (הכנסות מול הוצאות)</strong>
+                <ul>
+                    <li>כלי פשוט ויעיל להזנת נתונים שוטפת של הוצאות הפרויקט (קבלני משנה, חומרים, ספקים, מנופים וכד').</li>
+                    <li>חיבור אוטומטי בין ההכנסות (סעיף א') להוצאות (סעיף ב').</li>
+                    <li><strong>התוצאה:</strong> "שורה תחתונה" ברורה לכל פרויקט – תמונת מצב אמיתית של הרווח שנשאר בכיס.</li>
+                </ul>
+            </li>
+
+            <li>
+                <strong>ג. מרכז המשימות והתיאומים</strong>
+                <ul>
+                    <li>מערכת לריכוז וניהול ה"בלגן" השוטף: תיאומים מול ספקים, משימות אישיות, דברים פתוחים מול לקוחות.</li>
+                    <li>תצוגה חכמה לפי דחיפות ולפי שיוך לפרויקט, לייעול ההתנהלות היומיומית.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <!-- Section 3 -->
+        <h3>3. הכלים והשיטה</h3>
+        <ul>
+            <li>המערכת תיבנה על גבי פלטפורמת ניהול ענן (כדוגמת Monday.com), המאפשרת גישה נוחה ומאובטחת הן מהמחשב במשרד והן מהטלפון הנייד בשטח.</li>
+            <li>הדגש בבנייה יהיה על ממשק משתמש נקי, פשוט, ומינימום הקלקות לביצוע פעולה.</li>
+        </ul>
+
+        <!-- Section 4 -->
+        <h3>4. השקעה ולוחות זמנים</h3>
+        
+        <table class="pricing-table">
+            <thead>
+                <tr>
+                    <th>תיאור השירות</th>
+                    <th style="text-align: left;">מחיר (חד פעמי)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <strong>חבילת "שליטה ובקרה"</strong><br>
+                        <span style="font-size: 0.9em; color: #666;">כולל אפיון, הקמה, הטמעה והדרכה</span>
+                    </td>
+                    <td class="price-cell">5,000 ₪</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="notes">
+            * המחיר אינו כולל מע"מ.<br>
+            * תנאי תשלום: 50% מקדמה עם אישור ההצעה, 50% עם מסירת המערכת וההדרכה.<br>
+            * זמן אספקה: עד 14 ימי עסקים מרגע קבלת המקדמה והחומרים הנדרשים.<br>
+            * הערות: המחיר אינו כולל את עלות רישיון השימוש בתוכנה (תשלום ישיר לספק התוכנה, מוערך בכ-50-100 ₪ לחודש).
+        </div>
+
+        <!-- Signature -->
+        <div class="signature-area">
+            <div class="sign-box">
+                <div class="sign-line"></div>
+                <strong>חתימת הלקוח (אסף קדישאי)</strong>
+            </div>
+            <div class="sign-box">
+                <div class="sign-line"></div>
+                <strong>עמרי קורן, Methodic Ops</strong>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px; font-size: 0.8em; color: #999;">
+            הצעה זו תקפה ל-14 יום מיום הפקתה
+        </div>
+
+    </div>
+</body>
+</html>
